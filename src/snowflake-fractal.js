@@ -4,13 +4,13 @@ function toRadian(angle) {
 
 function drawSnowFlakeLine(context, x0, y0, angle0, length, deep) {
     if (deep == 0) {
-        let x1 = x0 + length * Math.sin(angle0),
+        let x1 = x0 + length * Math.cos(angle0),
             y1 = y0 - length * Math.sin(angle0);
 
         context.moveTo(x0, y0);
         context.lineTo(x1, y1);
     } else {
-        let angles = Array(1, 2, 3, 4);
+        let angles = Array(0, -60, 120, -60);
         let xi = x0,
             yi = y0,
             anglei = angle0,
